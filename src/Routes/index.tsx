@@ -16,7 +16,7 @@ const Routing = () => {
   useEffect(() => {
     if (iconRef.current)
       if (scrollVal >= 1000) iconRef.current.style.display = "block";
-      else if (scrollVal <= 1000) iconRef.current.style.display = "none";
+      else if (scrollVal <= 1000) iconRef.current.style.display = "block";
   }, [scrollVal]);
   return (
     <div>
