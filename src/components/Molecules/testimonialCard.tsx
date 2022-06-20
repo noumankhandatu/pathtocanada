@@ -10,11 +10,8 @@ const TestimonialCard = ({
   avatarImg,
 }: TestimonialCardProps) => {
   return (
-    <div
-      style={{ height: "100vh" }}
-      className="bg-TCard-color  p-10 ml-4 mr-4"
-    >
-      <div className="pl-10 pr-10">
+    <div className="bg-TCard-color md:h-screen h-fit  md:p-10 p-5 md:ml-4 ml-2 mr-2 md:mr-4">
+      <div className="md:pl-10 md:pr-10 pr-3 pl-3">
         <div className="text-center flex justify-center">
           <img src={iconImg} alt="" />
         </div>
