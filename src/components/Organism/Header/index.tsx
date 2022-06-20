@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
 import HeaderItem from "../../Atoms/headerItem";
+
 const Header = () => {
   const [headerValue, setHeaderValue] = useState<number>(1);
   const headerRef = useRef<HTMLDivElement>(null!);
@@ -10,11 +11,11 @@ const Header = () => {
       setHeaderValue(window.pageYOffset);
       console.log(headerValue, "value");
     };
-    if (headerValue > 300) {
+    if (headerValue > 100) {
       headerRef.current.style.height = "55px";
       imageRef.current.style.height = "30px";
       headerRef.current.style.boxShadow = "2px 2px 4px #e4e4e7";
-    } else if (headerValue < 300) {
+    } else if (headerValue < 100) {
       headerRef.current.style.height = "100px";
       imageRef.current.style.height = "80px";
       headerRef.current.style.boxShadow = "none";
