@@ -8,7 +8,6 @@ import ScrollTopButton from "../components/Molecules/scrollTopButton";
 const Routing = () => {
   const [scrollVal, setScrollVal] = useState<number>(1);
   const iconRef = useRef<HTMLDivElement>(null!);
-  console.log(scrollVal, "val");
   useEffect(() => {
     window.onscroll = () => {
       setScrollVal(window.pageYOffset);

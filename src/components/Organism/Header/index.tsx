@@ -7,21 +7,11 @@ const Header = () => {
   useEffect(() => {
     window.onscroll = () => {
       setHeaderValue(window.pageYOffset);
-      console.log(headerValue, "val");
+      console.log(headerValue, "value");
     };
-    // const refresh = () => {
-    //   if (headerValue >= 500) {
-    //     window.location.reload();
-    //     setHeaderValue(0);
-    //   }
-    // };
-    // refresh();
-  }, []);
-  useEffect(() => {
-    if (headerRef.current)
-      if (headerValue > 500) headerRef.current.style.height = "55px";
-      else if (headerValue < 500) headerRef.current.style.height = "80px";
-  }, [headerValue, setHeaderValue]);
+    if (headerValue > 500) headerRef.current.style.height = "55px";
+    else if (headerValue < 500) headerRef.current.style.height = "80px";
+  });
   const myArray: string[] = [
     "EMPLOYEE ",
     "EMPLOYERS",
@@ -34,7 +24,7 @@ const Header = () => {
     <div>
       <div
         ref={headerRef}
-        className="fixed bg-white z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between shadow-md"
+        className="fixed ease-in-out bg-white z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between shadow-md"
       >
         <div>
           <img
