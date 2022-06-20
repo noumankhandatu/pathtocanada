@@ -122,7 +122,7 @@ const Home = () => {
       </Wrapper>
       {/* Road Map Start */}
       <Wrapper bgColor="bg-road-map-color text-white">
-        <div className=" pt-20 pb-72">
+        <div className=" pt-20 pb-52">
           <p className="text-5xl text-center   font-bold ">
             The Path to Canada Road Map
           </p>
@@ -137,6 +137,31 @@ const Home = () => {
           {RoadMapArray.map((items: any) => {
             return <RoadMapCards {...items} />;
           })}
+        </div>
+      </Wrapper>
+      <Wrapper bgColor="bg-red-bgColor text-white pb-20">
+        <div className=" pt-20 pb-20">
+          <p className="text-4xl text-center   font-bold ">
+            We connect talent to hiring Canadian tech companies
+            <p className="break-words">Let’s work together.</p>
+          </p>
+        </div>
+        <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_0.1fr_1fr] gap-10">
+          <div className="flex flex-col items-center">
+            <p className="text-2xl font-bold">Find my tech role in Canada</p>
+            <p className="font-bold pt-5 pb-5">
+              Help me build my life and career.
+            </p>
+            <Button text="HELP ME FIND A CANDIDATE ?" secondary />
+          </div>
+          <div className="w-hr h-22 bg-white"></div>
+          <div className="flex flex-col items-center">
+            <p className="text-2xl font-bold">Find my tech role in Canada</p>
+            <p className="font-bold pt-5 pb-5">
+              Help me build my life and career.
+            </p>
+            <Button text="HELP ME FIND A CANDIDATE ?" secondary />
+          </div>
         </div>
       </Wrapper>
     </div>

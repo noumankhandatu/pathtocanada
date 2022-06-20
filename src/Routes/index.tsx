@@ -6,7 +6,7 @@ import Footer from "../components/Organism/Footer/index";
 import Error from "../Pages/Error/index";
 import ScrollTopButton from "../components/Molecules/scrollTopButton";
 const Routing = () => {
-  const [scrollVal, setScrollVal] = useState(1);
+  const [scrollVal, setScrollVal] = useState<number>(1);
   const iconRef = useRef<HTMLDivElement>(null!);
   console.log(scrollVal, "val");
   useEffect(() => {
