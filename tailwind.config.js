@@ -13,6 +13,7 @@ module.exports = {
         "red-bgColor": "#DE1F29",
         "aqua-color": "#034647",
         "TCard-color": "#F7F0EA",
+        "hrBanner-color": "#034647",
       },
       backgroundPosition: {
         "footer-img-position": "left -12% bottom -150%",

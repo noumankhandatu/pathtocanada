@@ -17,7 +17,7 @@ const Home = () => {
         className=" auto bg-no-repeat bg-[url('https://path2canada.ca/wp-content/uploads/2022/05/home_hero.svg')] "
       >
         <div className="pt-10 pl-10 pr-10 md:pl-20 md:pr-20">
-          <p className="text-6xl font-bold tracking-widest text-cyan-900	">
+          <p className="text-6xl font-bold md:tracking-widest text-cyan-900	">
             Solving the
             <p className="break-words tracking-widest	"> Canadian tech</p>
             <p className="break-words tracking-widest">talent shortage.</p>
@@ -165,13 +165,14 @@ const Home = () => {
           </div>
         </div>
       </Wrapper>
-      <Wrapper bgColor="pb-20">
+      {/* testimonals */}
+      <Wrapper bgColor="pb-20 ">
         <div className=" pt-20 pb-16">
           <p className="text-5xl text-center text-aqua-color  font-bold ">
             What our candidates say
           </p>
         </div>
-        <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_1fr] gap-4 ">
+        <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_1fr] gap-4  ">
           <div>
             <TestimonialCard
               text="“Having to leave the US by December due to a denied H-1B was obviously a stressful situation. I was able to secure a Canadian work permit using Global Talent Stream quickly. I can now continue my tech career in Canada.”"
@@ -194,6 +195,20 @@ const Home = () => {
               }
             />
           </div>
+        </div>
+      </Wrapper>
+      {/* black banner */}
+      <Wrapper bgColor="bg-black pt-7 pb-7">
+        <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_0.2fr_1fr] items-center	  gap-4 md:gap-20 ">
+          <div className="border-t-8 border-hrBanner-color  "></div>
+          <div className="flex justify-center ">
+            <img
+              className="w-16"
+              src="https://path2canada.ca/wp-content/uploads/2022/05/pathToCanada_favicon.png"
+              alt=""
+            />
+          </div>
+          <div className="border-t-8 border-hrBanner-color  "></div>
         </div>
       </Wrapper>
     </div>
