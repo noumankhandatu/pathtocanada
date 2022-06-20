@@ -11,6 +11,8 @@ module.exports = {
         "footer-color": "#87A2A3",
         "road-map-color": "#034647",
         "red-bgColor": "#DE1F29",
+        "aqua-color": "#034647",
+        "TCard-color": "#F7F0EA",
       },
       backgroundPosition: {
         "footer-img-position": "left -12% bottom -150%",

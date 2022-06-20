@@ -4,6 +4,7 @@ import Input from "../../components/Atoms/input";
 import Wrapper from "../../components/Organism/Wrapper";
 import RoadMapCards from "../../components/Molecules/RoadMapCards";
 import RoadMapArray from "../../components/array/roadmaparray";
+import TestimonialCard from "../../components/Molecules/testimonialCard";
 const Home = () => {
   return (
     <div className="pt-24">
@@ -140,27 +141,58 @@ const Home = () => {
         </div>
       </Wrapper>
       <Wrapper bgColor="bg-red-bgColor text-white pb-20">
-        <div className=" pt-20 pb-20">
+        <div className=" pt-16 pb-16">
           <p className="text-4xl text-center   font-bold ">
             We connect talent to hiring Canadian tech companies
             <p className="break-words">Let’s work together.</p>
           </p>
         </div>
-        <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_0.1fr_1fr] gap-10">
+        <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_0.1fr_1fr] ">
           <div className="flex flex-col items-center">
             <p className="text-2xl font-bold">Find my tech role in Canada</p>
-            <p className="font-bold pt-5 pb-5">
+            <p className="font-bold pt-5 pb-10">
               Help me build my life and career.
             </p>
-            <Button text="HELP ME FIND A CANDIDATE ?" secondary />
+            <Button text="Complete Profile " dark />
           </div>
           <div className="w-hr h-22 bg-white"></div>
           <div className="flex flex-col items-center">
             <p className="text-2xl font-bold">Find my tech role in Canada</p>
-            <p className="font-bold pt-5 pb-5">
+            <p className="font-bold pt-5 pb-10">
               Help me build my life and career.
             </p>
-            <Button text="HELP ME FIND A CANDIDATE ?" secondary />
+            <Button text="Book a consultation" dark />
+          </div>
+        </div>
+      </Wrapper>
+      <Wrapper bgColor="pb-20">
+        <div className=" pt-20 pb-16">
+          <p className="text-5xl text-center text-aqua-color  font-bold ">
+            What our candidates say
+          </p>
+        </div>
+        <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_1fr] gap-4 ">
+          <div>
+            <TestimonialCard
+              text="“Having to leave the US by December due to a denied H-1B was obviously a stressful situation. I was able to secure a Canadian work permit using Global Talent Stream quickly. I can now continue my tech career in Canada.”"
+              iconImg={
+                "https://path2canada.ca/wp-content/uploads/2022/05/quotes-img.png"
+              }
+              avatarImg={
+                "https://path2canada.ca/wp-content/uploads/2022/05/Deepak-Bandi-150x150-1.jpeg"
+              }
+            />
+          </div>
+          <div>
+            <TestimonialCard
+              text="I am writing this testimonial to show my appreciation and gratitude towards the Path 2 Canada team who helped me immensely in getting Canadian work permit visa using Global talent stream. Got a prompt response for all the questions I had in the immigration process. They have a highly skilled expert team to provide end to end immigration services. "
+              iconImg={
+                "https://path2canada.ca/wp-content/uploads/2022/05/quotes-img.png"
+              }
+              avatarImg={
+                "https://path2canada.ca/wp-content/uploads/2022/05/Gaurav-Saraswat-150x150-1.jpeg"
+              }
+            />
           </div>
         </div>
       </Wrapper>
