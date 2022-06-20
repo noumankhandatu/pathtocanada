@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
 import HeaderItem from "../../Atoms/headerItem";
 const Header = () => {
+  const [headerValue, setHeaderValue] = useState<number>(1);
+  const headerRef = useRef<HTMLDivElement>(null!);
+  useEffect(() => {
+    window.onscroll = () => {
+      setHeaderValue(window.pageYOffset);
+      console.log(headerValue, "val");
+    };
+    // const refresh = () => {
+    //   if (headerValue >= 500) {
+    //     window.location.reload();
+    //     setHeaderValue(0);
+    //   }
+    // };
+    // refresh();
+  }, []);
+  useEffect(() => {
+    if (headerRef.current)
+      if (headerValue > 500) headerRef.current.style.height = "55px";
+      else if (headerValue < 500) headerRef.current.style.height = "80px";
+  }, [headerValue, setHeaderValue]);
   const myArray: string[] = [
     "EMPLOYEE ",
     "EMPLOYERS",
@@ -12,7 +32,10 @@ const Header = () => {
   ];
   return (
     <div>
-      <div className="fixed bg-white  z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between shadow-md">
+      <div
+        ref={headerRef}
+        className="fixed bg-white z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between shadow-md"
+      >
         <div>
           <img
             className="w-24 "
@@ -38,3 +61,6 @@ const Header = () => {
 };
 
 export default Header;
+function refresh() {
+  throw new Error("Function not implemented.");
+}
