@@ -32,10 +32,11 @@ const Header = () => {
     <div>
       <div
         ref={headerRef}
-        className="fixed ease-in-out bg-white z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between"
+        className="fixed ease-in-out duration-1000 bg-white z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between"
       >
         <div>
           <img
+            className="ease-in-out duration-1000"
             ref={imageRef}
             src="https://path2canada.ca/wp-content/uploads/2022/05/pathToCanada_logo.svg"
           />
