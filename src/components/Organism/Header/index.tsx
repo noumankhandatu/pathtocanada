@@ -4,13 +4,21 @@ import HeaderItem from "../../Atoms/headerItem";
 const Header = () => {
   const [headerValue, setHeaderValue] = useState<number>(1);
   const headerRef = useRef<HTMLDivElement>(null!);
+  const imageRef = useRef<HTMLImageElement>(null!);
   useEffect(() => {
     window.onscroll = () => {
       setHeaderValue(window.pageYOffset);
       console.log(headerValue, "value");
     };
-    if (headerValue > 500) headerRef.current.style.height = "55px";
-    else if (headerValue < 500) headerRef.current.style.height = "80px";
+    if (headerValue > 300) {
+      headerRef.current.style.height = "55px";
+      imageRef.current.style.height = "30px";
+      headerRef.current.style.boxShadow = "2px 2px 4px #e4e4e7";
+    } else if (headerValue < 300) {
+      headerRef.current.style.height = "100px";
+      imageRef.current.style.height = "80px";
+      headerRef.current.style.boxShadow = "none";
+    }
   });
   const myArray: string[] = [
     "EMPLOYEE ",
@@ -24,11 +32,11 @@ const Header = () => {
     <div>
       <div
         ref={headerRef}
-        className="fixed ease-in-out bg-white z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between shadow-md"
+        className="fixed ease-in-out bg-white z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between"
       >
         <div>
           <img
-            className="w-24 "
+            ref={imageRef}
             src="https://path2canada.ca/wp-content/uploads/2022/05/pathToCanada_logo.svg"
           />
         </div>
