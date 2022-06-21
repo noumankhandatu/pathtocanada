@@ -6,6 +6,7 @@ import RoadMapCards from "../../components/Molecules/RoadMapCards";
 import RoadMapArray from "../../components/array/roadmaparray";
 import TestimonialCard from "../../components/Molecules/testimonialCard";
 import HomePageFirstSection from "../../components/Organism/homePageFirstSection";
+import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection/index";
 const Home = () => {
   return (
     <div className="pt-40">
@@ -177,19 +178,7 @@ const Home = () => {
         </div>
       </Wrapper>
       {/* black banner */}
-      <Wrapper bgColor="bg-black pt-7 pb-7">
-        <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_0.2fr_1fr] items-center	  gap-4 md:gap-20 ">
-          <div className="border-t-8 border-hrBanner-color  "></div>
-          <div className="flex justify-center ">
-            <img
-              className="w-16"
-              src="https://path2canada.ca/wp-content/uploads/2022/05/pathToCanada_favicon.png"
-              alt=""
-            />
-          </div>
-          <div className="border-t-8 border-hrBanner-color  "></div>
-        </div>
-      </Wrapper>
+      <BlackBannerLeafSection />
     </div>
   );
 };
