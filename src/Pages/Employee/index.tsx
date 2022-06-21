@@ -4,7 +4,8 @@ import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSec
 import Wrapper from "../../components/Organism/Wrapper/index";
 import EmployeeCard from "../../components/Molecules/employeeCard";
 import EmployeeCardArray from "../../components/array/employeeCardArray";
-
+import Input from "../../components/Atoms/input";
+import Button from "../../components/Atoms/button";
 const Employee = () => {
   return (
     <div className="pt-40">
@@ -53,10 +54,16 @@ const Employee = () => {
         </div>
       </Wrapper>
       <Wrapper bgColor="bg-form-color">
-        <div className="pb-20 pt-20">
-          <div className="grid grid-cols-2 text-white gap-5">
+        <div
+          style={{
+            backgroundSize: "40% 59%",
+            backgroundPosition: "left 25% bottom -27%",
+          }}
+          className="pb-20 pt-20 bg-[url('https://path2canada.ca/wp-content/uploads/2022/05/employees_arrowMan_white.svg')] bg-cover	 bg-no-repeat  "
+        >
+          <div className="grid lg:grid-cols-[0.7fr_1fr]  grid-cols-1 text-white gap-40">
             <div>
-              <p className="text-4xl font-bold  ">
+              <p className="lg:text-4xl text-3xl font-bold  ">
                 Ready to move to Canada to continue your tech career?
               </p>
               <p className="text-2xl pt-10 font-bold  ">
@@ -91,7 +98,7 @@ const Employee = () => {
             {/* form below */}
             <div>
               <div className="text-center p-10 bg-red-600">
-                <p className="text-4xl font-bold  text-white">
+                <p className="lg:text-4xl text-3xl font-bold  text-white">
                   SUBMIT YOUR PROFILE TODAY!
                 </p>
                 <p className="pt-5">
@@ -99,16 +106,29 @@ const Employee = () => {
                 </p>
               </div>
               <div className=" p-10 bg-white text-black">
-                <p className="text-5xl font-bold  text-aqua-color">
+                <p className="lg:text-5xl text-3xl font-bold  text-aqua-color">
                   Candidate Assessment
                 </p>
-                <p className="pt-5">
+                <p className="pt-10 pb-10">
                   Let this be the start of a new life for you in Canada. Please
                   complete your profile as accurately and completely as possible
                   to allow us to quickly determine your qualification for our
                   Tech Talent Relocation Program.
                 </p>
-                <p></p>
+                <hr />
+                <div className="pt-5">
+                  <p className="text-base font-bold pb-10">Name*</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2  gap-3 pb-5">
+                    <Input text="First" width={"w-full"} toggle={true} />
+                    <Input text="Last " width={"w-full"} toggle={true} />
+                  </div>
+                  <div className="pt-5">
+                    <Input text="Email" width={"w-full"} toggle={true} />
+                  </div>
+                  <div className="pt-10 pb-5">
+                    <Button text="NEXT" primary />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -116,12 +136,12 @@ const Employee = () => {
       </Wrapper>
       {/* guy with coffee section below */}
       <div
-        className="md:pl-32 pl-5  pt-10"
+        className="lg:pl-32 pl-5  pt-10"
         style={{ backgroundColor: "#F2EAE1" }}
       >
-        <div className="pt-20 relative  grid md:grid-cols-[0.7fr_1fr_1fr]  grid-cols-1 gap-2">
+        <div className="pt-20 relative  grid lg:grid-cols-[0.7fr_1fr_1fr]  grid-cols-1 gap-2">
           <div>
-            <p className="text-6xl font-bold md:tracking-wide text-cyan-900	">
+            <p className="lg:text-6xl text-3xl font-bold lg:tracking-wide text-cyan-900	">
               What happens once you submit your profile?
             </p>
           </div>
