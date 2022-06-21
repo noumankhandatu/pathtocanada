@@ -5,6 +5,7 @@ import Home from "../Pages/Home/index";
 import Footer from "../components/Organism/Footer/index";
 import Error from "../Pages/Error/index";
 import ScrollTopButton from "../components/Molecules/scrollTopButton";
+import Employee from "../Pages/Employee/index";
 const Routing = () => {
   const [scrollVal, setScrollVal] = useState<number>(1);
   const iconRef = useRef<HTMLDivElement>(null!);
@@ -29,6 +30,7 @@ const Routing = () => {
           {["/", "/home"].map((path) => (
             <Route path={path} element={<Home />} />
           ))}
+          <Route path="/employee" element={<Employee />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />

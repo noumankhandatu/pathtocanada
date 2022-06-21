@@ -5,41 +5,20 @@ import Wrapper from "../../components/Organism/Wrapper";
 import RoadMapCards from "../../components/Molecules/RoadMapCards";
 import RoadMapArray from "../../components/array/roadmaparray";
 import TestimonialCard from "../../components/Molecules/testimonialCard";
+import HomePageFirstSection from "../../components/Organism/homePageFirstSection";
 const Home = () => {
   return (
-    <div className="pt-24">
-      <div
-        style={{
-          backgroundSize: "80%",
-          height: "80vh",
-          backgroundPosition: "right -41% bottom -16%",
-        }}
-        className=" auto bg-no-repeat bg-[url('https://path2canada.ca/wp-content/uploads/2022/05/home_hero.svg')] "
-      >
-        <div className="pt-10 pl-10 pr-10 md:pl-20 md:pr-20">
-          <p className="text-6xl font-bold md:tracking-widest text-cyan-900	">
-            Solving the
-            <p className="break-words tracking-widest	"> Canadian tech</p>
-            <p className="break-words tracking-widest">talent shortage.</p>
-          </p>
-          <p className="pt-10">
-            We are a marketplace that expertly matches highly experienced global
-            talent with
-            <p className="break-words">
-              hiring Canadian companies. Relocating talent into Canada using a
-              world-class
-            </p>
-            <p className="break-words">immigration program is our specialty.</p>
-          </p>
-          <div className="mt-10 md:flex ">
-            <Button text="AM I CANDIDATE ?" primary />
-            <div className="mr-4 mt-10 "></div>
-            <Button text="HELP ME FIND A CANDIDATE ?" secondary />
-          </div>
-        </div>
-      </div>
-      <div className="h-12 bg-red-50"></div>
-      {/* Orange Mark => */}
+    <div className="pt-40">
+      <HomePageFirstSection
+        heading={`Solving the Canadian tech talent shortage.`}
+        paragraph={
+          "We are a marketplace that expertly matches highly experienced global talent with hiring Canadian companies. Relocating talent into Canada using a world-class immigration program is our specialty."
+        }
+        bgImage={`https://path2canada.ca/wp-content/uploads/2022/05/home_hero.svg`}
+        showFirstBtn={true}
+        showSecondBtn={true}
+      />
+      {/* Second Section Started  => */}
       <Wrapper bgColor="bg-light-red">
         <p className="text-4xl text-center font-bold pt-20  pb-10  text-cyan-900">
           Path to Canada has a deep understanding

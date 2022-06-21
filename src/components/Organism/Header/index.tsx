@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
 import HeaderItem from "../../Atoms/headerItem";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [headerValue, setHeaderValue] = useState<number>(1);
@@ -35,16 +36,16 @@ const Header = () => {
         ref={headerRef}
         className="fixed ease-in-out duration-1000 bg-white z-10 top-0 left-0 right-0 p-3 pl-10 pr-10 flex items-center justify-between"
       >
-        <div>
+        <Link to="/">
           <img
             className="ease-in-out duration-1000"
             ref={imageRef}
             src="https://path2canada.ca/wp-content/uploads/2022/05/pathToCanada_logo.svg"
           />
-        </div>
+        </Link>
         <div className="md:flex gap-4 sm:flex lg:flex space-x-4 hidden ">
-          {myArray.map((items) => {
-            return <HeaderItem text={items} />;
+          {myArray.map((items, id) => {
+            return <HeaderItem text={items} id={id} />;
           })}
         </div>
         <div className="block sm:hidden md:hidden lg:hidden">
