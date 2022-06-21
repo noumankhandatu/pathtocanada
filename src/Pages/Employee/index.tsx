@@ -18,7 +18,7 @@ const Employee = () => {
         showFirstBtn={true}
       />
       <Wrapper bgColor="bg-employee-Color pt-5 pb-20">
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-10  pt-20 ">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10  pt-20 ">
           <div>
             <img
               src="https://path2canada.ca/wp-content/uploads/2022/05/employees_manInFrontOfComputer.svg"
@@ -47,7 +47,7 @@ const Employee = () => {
             </p>
           </div>
         </div>
-        <div className="pt-20 pb-20 grid md:grid-cols-3  grid-cols-1 gap-5">
+        <div className="pt-20 pb-20 grid lg:grid-cols-3  grid-cols-1 gap-5">
           {EmployeeCardArray.map((items: object) => {
             return <EmployeeCard items={items} />;
           })}

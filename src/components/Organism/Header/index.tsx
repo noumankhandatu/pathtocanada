@@ -50,12 +50,12 @@ const Header = () => {
             src="https://path2canada.ca/wp-content/uploads/2022/05/pathToCanada_logo.svg"
           />
         </Link>
-        <div className="md:flex gap-4 sm:flex lg:flex space-x-4 hidden ">
+        <div className="md:hidden gap-4 sm:hidden lg:flex space-x-4 hidden ">
           {myArray.map((items, id) => {
             return <HeaderItem text={items} id={id} />;
           })}
         </div>
-        <div className="block sm:hidden md:hidden lg:hidden">
+        <div className="block sm:block md:block lg:hidden">
           <MenuIcon
             onClick={() => {
               alert("Loading");

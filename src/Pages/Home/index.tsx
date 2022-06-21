@@ -105,7 +105,7 @@ const Home = () => {
       {/* Road Map Start */}
       <Wrapper bgColor="bg-road-map-color text-white">
         <div className=" pt-20 pb-52">
-          <p className="text-5xl text-center   font-bold ">
+          <p className="lg:text-5xl text-3xl text-center   font-bold ">
             The Path to Canada Road Map
           </p>
           <p className="text-center pt-16 pb-16">
@@ -123,7 +123,7 @@ const Home = () => {
       </Wrapper>
       <Wrapper bgColor="bg-red-bgColor text-white pb-20">
         <div className=" pt-16 pb-16">
-          <p className="text-4xl text-center   font-bold ">
+          <p className="lg:text-4xl text-3xl text-center   font-bold ">
             We connect talent to hiring Canadian tech companies
             <p className="break-words">Let’s work together.</p>
           </p>
@@ -149,7 +149,7 @@ const Home = () => {
       {/* testimonals */}
       <Wrapper bgColor="pb-20 ">
         <div className=" pt-20 pb-16">
-          <p className="text-5xl text-center text-aqua-color  font-bold ">
+          <p className="lg:text-5xl text-4xl text-center text-aqua-color  font-bold ">
             What our candidates say
           </p>
         </div>
