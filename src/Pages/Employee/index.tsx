@@ -52,6 +52,45 @@ const Employee = () => {
           })}
         </div>
       </Wrapper>
+      <div className="md:pl-32 pl-5  pt-10" style={{ backgroundColor: "#F2EAE1" }}>
+        <div className="pt-20 relative  grid md:grid-cols-[0.7fr_1fr_1fr]  grid-cols-1 gap-2">
+          <div>
+            <p className="text-6xl font-bold md:tracking-wide text-cyan-900	">
+              What happens once you submit your profile?
+            </p>
+          </div>
+          <div>
+            <p className="break-words tracking-wide text-lg	 font-bold pb-5">
+              Our team will first determine your qualification status. We will
+              then actively partner with you and match you to current or future
+              open roles.
+            </p>
+            <p className="break-words tracking-wide font-normal pt-5 pb-5 ">
+              You will be invited to a video call so we can get to know you and
+              understand your specific situation and the type of role you are
+              interested in. In this session, we will share our expertise on the
+              Canadian tech sector, the positions that match your skill sets,
+              and then begin the process of getting you connected and
+              interviewed. Our number one goal is you! We want to ensure you get
+              an amazing role with a great company and with a good salary to
+              match!
+            </p>
+            <p className="break-words tracking-wide font-normal pt-5">
+              We understand that moving to a new country isn’t easy and you’ll
+              have lots of questions. We are here to support you every step of
+              the way. You will have direct access to our team of professionals
+              and informational webinars to ensure your transition to Canada is
+              as smooth as possible.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://path2canada.ca/wp-content/uploads/2022/05/employees_happyWorker.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
       <BlackBannerLeafSection />
     </div>
   );

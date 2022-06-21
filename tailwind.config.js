@@ -14,6 +14,7 @@ module.exports = {
         "aqua-color": "#034647",
         "TCard-color": "#F7F0EA",
         "hrBanner-color": "#034647",
+        "employee-bgImg": "#F2EAE1",
         "employee-Color": "#FCF9F6",
       },
       backgroundPosition: {
