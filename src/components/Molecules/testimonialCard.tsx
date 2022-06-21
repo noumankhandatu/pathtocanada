@@ -17,7 +17,7 @@ const TestimonialCard = ({
         </div>
         <p className="pt-10 tracking-wider	pb-10	">{text}</p>
         <div className="text-center flex justify-center  ">
-          <img src={avatarImg} alt="" className="rounded-full" />
+          <img src={avatarImg} alt="" className="rounded-full grayscale " />
         </div>
         <p className="pt-10 	pb-16	font-bold">-Deepak</p>
       </div>
