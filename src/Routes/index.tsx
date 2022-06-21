@@ -7,25 +7,11 @@ import Error from "../Pages/Error/index";
 import ScrollTopButton from "../components/Molecules/scrollTopButton";
 import Employee from "../Pages/Employee/index";
 const Routing = () => {
-  const [scrollVal, setScrollVal] = useState<number>(1);
-  const iconRef = useRef<HTMLDivElement>(null!);
-  useEffect(() => {
-    window.onscroll = () => {
-      setScrollVal(window.pageYOffset);
-    };
-  }, []);
-  useEffect(() => {
-    if (iconRef.current)
-      if (scrollVal >= 1000) iconRef.current.style.display = "block";
-      else if (scrollVal <= 1000) iconRef.current.style.display = "block";
-  }, [scrollVal]);
   return (
     <div>
       <Router>
         <Header />
-        <div ref={iconRef}>
-          <ScrollTopButton />
-        </div>
+
         <Routes>
           {["/", "/home"].map((path) => (
             <Route path={path} element={<Home />} />
