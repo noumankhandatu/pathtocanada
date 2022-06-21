@@ -2,6 +2,8 @@ import React from "react";
 import HomePageFirstSection from "../../components/Organism/homePageFirstSection";
 import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection/index";
 import Wrapper from "../../components/Organism/Wrapper/index";
+import EmployeeCard from "../../components/Molecules/employeeCard";
+import EmployeeCardArray from "../../components/array/employeeCardArray";
 
 const Employee = () => {
   return (
@@ -43,6 +45,11 @@ const Employee = () => {
               </p>
             </p>
           </div>
+        </div>
+        <div className="pt-20 pb-20 grid md:grid-cols-3  grid-cols-1 gap-5">
+          {EmployeeCardArray.map((items: object) => {
+            return <EmployeeCard items={items} />;
+          })}
         </div>
       </Wrapper>
       <BlackBannerLeafSection />

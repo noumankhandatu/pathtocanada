@@ -7,6 +7,7 @@ import RoadMapArray from "../../components/array/roadmaparray";
 import TestimonialCard from "../../components/Molecules/testimonialCard";
 import HomePageFirstSection from "../../components/Organism/homePageFirstSection";
 import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection/index";
+import RedLableText from "../../components/Atoms/redLableText";
 const Home = () => {
   return (
     <div className="pt-40">
@@ -64,9 +65,9 @@ const Home = () => {
               and let us match you with a Canadian Tech Company who is actively
               hiring for someone exactly like you.
             </p>
-            <p className="text-red-600 mt-20 hover:text-fuchsia-900 cursor-pointer	 font-bold tracking-wide	">
-              AM I A CANDIDATE?
-            </p>
+            <div className="mt-10 mb-10">
+              <RedLableText text="AM I A CANDIDATE?" />
+            </div>
           </div>
           <div>
             <p className="text-red-600 text-xl  	font-bold tracking-wide	">
@@ -94,9 +95,9 @@ const Home = () => {
                 skilled workers are ready to move to Canada to continue their
                 tech careers.
               </p>
-              <p className="text-red-600 mt-20 hover:text-fuchsia-900 cursor-pointer	 font-bold tracking-wide	">
-                HELP ME FIND A CANDIDATE
-              </p>
+              <div className="mt-10 mb-10">
+                <RedLableText text=" HELP ME FIND A CANDIDATE" />
+              </div>
             </p>
           </div>
         </div>
