@@ -26,7 +26,7 @@ const HomePageFirstSection = ({
         }}
       >
         <div className="pt-10 pl-10 pr-10 md:pl-20 md:pr-20 md:w-1/2">
-          <p className="text-6xl font-bold md:tracking-widest text-cyan-900	">
+          <p className="lg:text-6xl text-4xl font-bold md:tracking-widest text-cyan-900	">
             {heading}
           </p>
           <p className="pt-10">{paragraph}</p>
