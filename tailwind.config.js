@@ -17,9 +17,13 @@ module.exports = {
         "employee-bgImg": "#F2EAE1",
         "employee-Color": "#FCF9F6",
         "form-color": "#034647",
+        "light-blue-color": "#E4EEEF",
       },
       backgroundPosition: {
         "footer-img-position": "left -12% bottom -150%",
+      },
+      borderWidth: {
+        1: "1px",
       },
     },
   },
