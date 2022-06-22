@@ -3,6 +3,7 @@ import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSec
 import HomePageFirstSection from "../../components/Organism/homePageFirstSection/index";
 import Wrapper from "../../components/Organism/Wrapper/index";
 import Font from "../../components/Atoms/Font";
+import Banner from "../../components/Atoms/redBanner";
 const FAQS = () => {
   return (
     <div className="pt-40">
@@ -39,6 +40,13 @@ const FAQS = () => {
             the questions you may have as you explore your options.
           </Font>
         </div>
+      </Wrapper>
+      <Wrapper bgColor="pt-32 pb-20">
+        <div className="grid grid-cols-2 gap-10">
+          <Banner text="EMPLOYER FAQ" />
+          <Banner text="EMPLOYER FAQ" />
+        </div>
+        <div>fds</div>
       </Wrapper>
       <BlackBannerLeafSection />
     </div>
