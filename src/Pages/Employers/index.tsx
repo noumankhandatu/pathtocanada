@@ -39,8 +39,8 @@ const Employers = () => {
           </div>
           <div>
             <iframe
-              width="560"
-              height="315"
+              width="100%"
+              height="100%"
               src="https://www.youtube.com/embed/lcGgjS6U3vA"
               title="YouTube video player"
             ></iframe>
@@ -97,7 +97,7 @@ const Employers = () => {
           <p className="pt-4 text-3xl font-bold">Timeline​</p>
           <p className="pt-4 text-1xl font-bold">(8-10 Weeks)</p>
         </div>
-        <div className="flex">
+        <div className="flex flex-col  lg:flex-row justify-center items-center">
           <Stepper count={1} heading="Application Prep" paragraph="2 Weeks" />
           <Stepper
             count={2}

@@ -9,9 +9,12 @@ const Stepper = ({ count, heading, paragraph }: StepperProps) => {
   return (
     <div className=" pt-5 pb-5 w-1/3 text-center">
       <div className="relative">
-        <div className="bg-white" style={{ height: "2px" }}></div>
+        <div
+          className="bg-white"
+          style={{ height: "2px", width: "100%" }}
+        ></div>
         <CountCircle
-          className="absolute -top-6  right-40 center"
+          className="absolute -top-6 lg:right-40 left-8 center"
           count={count}
         />
       </div>
