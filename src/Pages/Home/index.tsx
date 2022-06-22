@@ -8,6 +8,7 @@ import TestimonialCard from "../../components/Molecules/testimonialCard";
 import HomePageFirstSection from "../../components/Organism/homePageFirstSection";
 import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection/index";
 import RedLableText from "../../components/Atoms/redLableText";
+import Font from "../../components/Atoms/Font";
 const Home = () => {
   return (
     <div className="pt-40">
@@ -29,7 +30,7 @@ const Home = () => {
           </p>
           <p className="breaks-words ">North American tech ecosystem.</p>
         </p>
-        <p className="break-words pt-10 pb-16 font-semibold ">
+        <Font className=" pt-10 pb-16 ">
           Utilizing Global Talent Stream, Path to Canada expertly connects only
           the most qualified H-1Bs and global tech talent with Canadian tech
           companies. Global Talent Stream is the best work visa program in the
@@ -37,7 +38,7 @@ const Home = () => {
           best talent. It truly is Canada’s secret weapon — it is an unknown
           resource that can quickly provide immigration solutions for qualified
           tech workers.
-        </p>
+        </Font>
         {/* grid =>  */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 pb-20 gap-10">
           <div>
@@ -52,19 +53,36 @@ const Home = () => {
               src="https://path2canada.ca/wp-content/uploads/2022/05/home_techProfessionals.svg"
               alt=""
             />
-            <p className="break-words pt-10 pb-10 font-semibold leading-loose	 ">
-              Have an H-1B work visa, or working in the US but are tired of
-              waiting for a US Green Card? Disillusioned with the US immigration
-              system and looking for a way to stay in North America? Already
-              tried the US immigration option and have been forced to exit and
-              move back to your home country? Open to exploring Canada as a
-              permanent option for living and working?
-            </p>
-            <p className="break-words  font-semibold leading-loose	 ">
+            <Font className="pt-10 pb-1 list-disc	">
+              <li>
+                Have an H-1B work visa, or working in the US but are tired of
+                waiting for a US Green Card?
+              </li>
+            </Font>
+            <Font className=" pb-1 list-disc	">
+              <li>
+                Disillusioned with the US immigration system and looking for a
+                way to stay in North America?
+              </li>
+            </Font>
+            <Font className=" pb-1 list-disc	">
+              <li>
+                Already tried the US immigration option and have been forced to
+                exit and move back to your home country? Open to exploring
+                Canada as a permanent option for living and working?
+              </li>
+            </Font>
+            <Font className=" pb-1 list-disc	">
+              <li>
+                Open to exploring Canada as a permanent option for living and
+                working?
+              </li>
+            </Font>
+            <Font>
               If any of the above applies to you, complete your profile today
               and let us match you with a Canadian Tech Company who is actively
               hiring for someone exactly like you.
-            </p>
+            </Font>
             <div className="mt-10 mb-10">
               <RedLableText text="AM I A CANDIDATE?" />
             </div>
@@ -81,24 +99,24 @@ const Home = () => {
               src="https://path2canada.ca/wp-content/uploads/2022/05/home_employers.svg"
               alt=""
             />
-            <p className="break-words pt-10 pb-10 font-semibold leading-loose	 ">
+            <Font className="pt-10 pb-10 ">
               Path to Canada has a Tech Talent Relocation Program that utilizes
               Canada’s Global Talent Stream, the best immigration program in the
               world, that was specifically created to support Canada’s tech
               sector.
-            </p>
-            <p className="break-words  font-semibold leading-loose	 ">
+            </Font>
+            <Font>
               We match our candidates to your open roles and provide you with a
               curated, carefully vetted group of top-quality, significantly
-              <p>
+              <Font>
                 experienced and educated US and global talent. These highly
                 skilled workers are ready to move to Canada to continue their
                 tech careers.
-              </p>
+              </Font>
               <div className="mt-10 mb-10">
                 <RedLableText text=" HELP ME FIND A CANDIDATE" />
               </div>
-            </p>
+            </Font>
           </div>
         </div>
       </Wrapper>
@@ -108,19 +126,20 @@ const Home = () => {
           <p className="lg:text-5xl text-3xl text-center   font-bold ">
             The Path to Canada Road Map
           </p>
-          <p className="text-center pt-16 pb-16">
+          <Font className="text-center pt-16 pb-16">
             From the moment you submit your online profile to the day you walk
             into your new office and start working in Canada, your journey will
             take approximately 90 days. Compared to waiting decades to get a
             green card in the US, the Canada’s Global Talent Stream process is
             relatively quick. Path to Canada partners with clients and employees
             providing high-touch individualized service every step of the way.
-          </p>
+          </Font>
           {RoadMapArray.map((items: any) => {
             return <RoadMapCards {...items} />;
           })}
         </div>
       </Wrapper>
+      {/* red layer connecting section */}
       <Wrapper bgColor="bg-red-bgColor text-white pb-20">
         <div className=" pt-16 pb-16">
           <p className="lg:text-4xl text-3xl text-center   font-bold ">

@@ -2,6 +2,7 @@ import React from "react";
 import Line from "../Atoms/line";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Font from '../Atoms/Font';
 AOS.init();
 const RoadMapCards = ({ ...items }) => {
   const { firstImg, secondImg } = items;
@@ -15,11 +16,11 @@ const RoadMapCards = ({ ...items }) => {
           src={firstImg}
           alt=""
         />
-        <p>
+        <Font>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio,
           asperiores. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           Provident, qui?
-        </p>
+        </Font>
       </div>
       <div>
         <Line {...items} />
@@ -33,11 +34,11 @@ const RoadMapCards = ({ ...items }) => {
             src={secondImg}
             alt=""
           />
-          <p>
+          <Font>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio,
             asperiores. Lorem ipsum dolor, sit amet consectetur adipisicing
             elit. Provident, qui?
-          </p>
+          </Font>
         </div>
       </div>
     </div>

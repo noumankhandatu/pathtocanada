@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../Atoms/button";
+import Font from "../../Atoms/Font";
 type HomePageFirstSectionProps = {
   heading?: string;
   paragraph?: string;
@@ -29,7 +30,7 @@ const HomePageFirstSection = ({
           <p className="lg:text-6xl text-4xl font-bold md:tracking-widest text-cyan-900	">
             {heading}
           </p>
-          <p className="pt-10">{paragraph}</p>
+          <Font className="pt-10">{paragraph}</Font>
           <div className="mt-10 md:flex ">
             {showFirstBtn ? <Button text="AM I CANDIDATE ?" primary /> : null}
             <div className="mr-4 mt-10 "></div>
