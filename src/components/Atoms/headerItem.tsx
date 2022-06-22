@@ -8,6 +8,7 @@ const HeaderItem = ({ text, id }: HeaderItemProps) => {
   let teleport: string = "";
   if (id === 0) teleport = "employee";
   if (id === 1) teleport = "employer";
+  if (id === 2) teleport = "jobs";
   return (
     <Link
       to={`/${teleport}`}
