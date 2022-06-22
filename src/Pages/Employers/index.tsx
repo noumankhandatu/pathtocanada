@@ -3,6 +3,8 @@ import HomePageFirstSection from "../../components/Organism/homePageFirstSection
 import Wrapper from "../../components/Organism/Wrapper/index";
 import Button from "../../components/Atoms/button";
 import Stepper from "../../components/Molecules/stepper";
+import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection/index";
+import Input from "../../components/Atoms/input";
 const Employers = () => {
   return (
     <div className="pt-40">
@@ -15,7 +17,7 @@ const Employers = () => {
         showFirstBtn={true}
       />
       <Wrapper bgColor="bg-employee-Color">
-        <div className="grid grid-cols-2 gap-10 pt-20 pb-20">
+        <div className="grid lg:grid-cols-2  grid-cols-1 gap-10 pt-20 pb-20">
           <div>
             <p className="text-4xl font-bold text-aqua-color">
               Struggling to hire quality tech talent in Canada?
@@ -120,6 +122,96 @@ const Employers = () => {
           </p>
         </div>
       </Wrapper>
+      <Wrapper>
+        <div className="pt-20 pb-20">
+          <p className="text-5xl text-center font-bold text-aqua-color">
+            Fill your open roles quickly with highly experienced talent.
+          </p>
+          <p className="pt-10 pb-10 text-center">
+            <p className="pb-3">
+              Combine Canada’s work class immigration program with our vetted
+              pool of international tech talent{" "}
+            </p>
+            (75% H-1B U.S. visa holders and 25% global) that are eager and ready
+            to move to Canada and you have an extraordinary opportunity
+            <p className="pt-3">to capitalize on.</p>
+          </p>
+        </div>
+        {/* form */}
+        <div className="pb-24 pt-20">
+          <div className="grid lg:grid-cols-[1fr_1fr]  grid-cols-1">
+            <div className="bg-light-blue-color p-10">
+              <p className="lg:text-4xl text-3xl font-bold  text-red-600">
+                Five Simple Steps
+              </p>
+              <p className="text-lg pb-6 pt-6 font-normal  ">
+                Extend your talent acquisition strategy to include Global and
+                U.S. talent. In 10 – 14 weeks, your open roles could be filled
+                with an outstanding highly talented employee.
+              </p>
+              <div>
+                <li className="list-decimal pt-4 text-lg">
+                  Enter into a Service Agreement with Path to Canada
+                </li>
+                <li className="list-decimal pt-4 text-lg">
+                  Intake call with the Path to Canada recruitment team to gather
+                  information on your company and the perfect candidate
+                </li>
+                <li className="list-decimal pt-4 text-lg">
+                  Vetted candidates are submitted – you interview and hire
+                  workers that are the right fit for your role and company
+                </li>
+                <li className="list-decimal pt-4 text-lg">
+                  Work Visa process begins
+                </li>
+                <li className="list-decimal pt-4 text-lg">
+                  Worker moves to Canada and joins your team! Exclusive access
+                  to a new source of technical talent to help you build your
+                  engineering team in Canada
+                </li>
+              </div>
+              <p className="text-2xl pt-10 font-bold  text-aqua-color">
+                Exclusive access to a new source of technical talent to help you
+                build your team in Canada
+              </p>
+            </div>
+            {/* form below */}
+            <div className="border border-black">
+              <div className=" p-10 bg-white text-black">
+                <p className="lg:text-5xl text-3xl font-bold  text-aqua-color">
+                  Book a Consultation
+                </p>
+                <p className="pt-10 pb-10">
+                  Got questions? Want to find out more? Let’s talk about how our
+                  services can provide you access to a new pool of high-caliber
+                  talent.
+                </p>
+                <hr />
+                <div className="pt-5">
+                  <div className="grid grid-cols-1 md:grid-cols-2  gap-3 pb-4">
+                    <Input text="First Name" width={"w-full"} toggle={true} />
+                    <Input text="Last Name" width={"w-full"} toggle={true} />
+                  </div>
+                  <div className="pb-4">
+                    <Input text="Company Name" width={"w-full"} toggle={true} />
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2  gap-3 pb-4">
+                    <Input text="Job Title" width={"w-full"} toggle={true} />
+                    <Input text="Email  " width={"w-full"} toggle={true} />
+                  </div>
+                  <div className="">
+                    <Input text="Comment" width={"w-full"} toggle={true} />
+                  </div>
+                  <div className="pt-10 pb-4 flex justify-center">
+                    <Button className="rounded" text="NEXT" primary />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+      <BlackBannerLeafSection />
     </div>
   );
 };
