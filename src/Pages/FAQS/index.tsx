@@ -4,6 +4,8 @@ import HomePageFirstSection from "../../components/Organism/homePageFirstSection
 import Wrapper from "../../components/Organism/Wrapper/index";
 import Font from "../../components/Atoms/Font";
 import Banner from "../../components/Atoms/redBanner";
+import Accordion from "../../components/Molecules/accordion";
+import AccordionArray from "../../components/array/accordionArray";
 const FAQS = () => {
   return (
     <div className="pt-40">
@@ -46,7 +48,11 @@ const FAQS = () => {
           <Banner text="EMPLOYER FAQ" />
           <Banner text="EMPLOYER FAQ" />
         </div>
-        <div>fds</div>
+        <div className="grid grid-cols-2 gap-10 gap-cols-20 mt-10">
+          {AccordionArray.map((items: object) => {
+            return <Accordion />;
+          })}
+        </div>
       </Wrapper>
       <BlackBannerLeafSection />
     </div>

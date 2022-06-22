@@ -23,6 +23,7 @@ module.exports = {
         "employee-Color": "#FCF9F6",
         "form-color": "#034647",
         "light-blue-color": "#E4EEEF",
+        "accordion-color": "#F4F4F4",
       },
       backgroundPosition: {
         "footer-img-position": "left -12% bottom -150%",
