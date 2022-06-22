@@ -16,14 +16,14 @@ const Button = ({ text, primary, dark, secondary, className }: ButtonProps) => {
     <div>
       {primary ? (
         <button
-          className={`${className} bg-red-600 hover:p-3 p-3 h-10 flex cursor-pointer items-center  border-2 justify-center  ease-in duration-300  hover:bg-white text-white font-semibold hover:text-red-600 border-red-600 hover:border-2`}
+          className={`${className} bg-red-600 hover:p-3 p-3 h-10 flex cursor-pointer items-center  tracking-tighter border-2 justify-center  ease-in duration-300  hover:bg-white text-white font-bold text-sm hover:text-red-600 border-red-600 hover:border-2`}
         >
           {text}
         </button>
       ) : null}
       {secondary ? (
         <button
-          className={`${className}hover:bg-red-600 hover:p-3 p-3 h-10 flex cursor-pointer items-center  border-2 justify-center  ease-in duration-300  bg-white hover:text-white font-semibold text-red-600 border-red-600 hover:border-2`}
+          className={`${className} hover:p-3 p-3 h-10 flex cursor-pointer tracking-tighter text-sm items-center  border-2 justify-center  ease-in duration-300 hover:bg-red-600 bg-white hover:text-white font-bold text-red-600 border-red-600 hover:border-2`}
         >
           {text}
         </button>

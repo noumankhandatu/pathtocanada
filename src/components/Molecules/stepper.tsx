@@ -1,5 +1,6 @@
 import React from "react";
 import CountCircle from "../Atoms/countCircle";
+import Font from "../Atoms/Font";
 type StepperProps = {
   count: number;
   heading?: string;
@@ -14,12 +15,12 @@ const Stepper = ({ count, heading, paragraph }: StepperProps) => {
           style={{ height: "2px", width: "100%" }}
         ></div>
         <CountCircle
-          className="absolute -top-6 lg:right-40 left-8 center"
+          className="absolute -top-6 lg:right-40 md:right-24 right-7   "
           count={count}
         />
       </div>
-      <p className="pt-10 pb-5 text-xl font-bold">{heading}</p>
-      <p className="font-bold">{paragraph}</p>
+      <Font className="pt-10 pb-5 text-xl font-bold">{heading}</Font>
+      <Font className="font-bold">{paragraph}</Font>
     </div>
   );
 };
