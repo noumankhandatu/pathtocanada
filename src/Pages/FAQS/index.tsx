@@ -50,7 +50,7 @@ const FAQS = () => {
         </div>
         <div className="grid grid-cols-2 gap-10 gap-cols-20 mt-10">
           {AccordionArray.map((items: object) => {
-            return <Accordion />;
+            return <Accordion items={items} />;
           })}
         </div>
       </Wrapper>
