@@ -1,3 +1,4 @@
+import Font from './Font';
 /**
  * @dev returns the current window size
  * @props type
@@ -12,7 +13,7 @@ const Input = ({ text, width, toggle }: InputProps) => {
   return (
     <div>
       <form action="">
-        <p className="font-normal">{text}*</p>
+        <Font className="font-bold">{text}*</Font>
         {toggle ? (
           <input
             type="text"
