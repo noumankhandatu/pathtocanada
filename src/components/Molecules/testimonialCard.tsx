@@ -1,4 +1,5 @@
 import React from "react";
+import Font from "../Atoms/Font";
 type TestimonialCardProps = {
   text?: string;
   iconImg?: string | any;
@@ -15,11 +16,11 @@ const TestimonialCard = ({
         <div className="text-center flex justify-center">
           <img src={iconImg} alt="" />
         </div>
-        <p className="pt-10 tracking-wider	pb-10	">{text}</p>
+        <Font className="pt-10 tracking-wider	pb-10	">{text}</Font>
         <div className="text-center flex justify-center  ">
           <img src={avatarImg} alt="" className="rounded-full grayscale " />
         </div>
-        <p className="pt-10 	pb-16	font-bold">-Deepak</p>
+        <Font className="pt-10 	pb-16	font-bold">-Deepak</Font>
       </div>
     </div>
   );

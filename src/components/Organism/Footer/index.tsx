@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/solid";
 import CheckBox from "../../Atoms/checkbox";
 import Button from "../../Atoms/button";
+import Font from "../../Atoms/Font";
 const Footer = () => {
   return (
     <div>
@@ -19,21 +20,16 @@ const Footer = () => {
             <p className="lg:text-5xl text-4xl font-bold tracking-wider">
               Let’s stay
             </p>
-            <p className="lg:text-5xl text-4xl font-bold pb-10 tracking-wider">
+            <p className="lg:text-5xl text-4xl font-bold pb-5 tracking-wider">
               Connected
             </p>
-            <p className="break-words  font-semibold leading-loose">
+            <Font>
               Sign up for our email newsletter to keep up-to-date on the
-            </p>
-            <p className="break-words  font-semibold leading-loose">
+            </Font>
+            <Font>
               North American Tech Sector. We will share insights, stats and key
-            </p>
-            <p className="break-words  font-semibold leading-loose">
-              industry information.
-            </p>
-            <p className="break-words  font-semibold leading-loose">
-              industry information.
-            </p>
+            </Font>
+            <Font>industry information.</Font>
             <div className="flex item-center space-x-4 pt-5 pb-5">
               <AcademicCapIcon className="h-10 p-2 w-10 cursor-pointer rounded-full bg-white text-footer-color" />
               <AnnotationIcon className="h-10 p-2 w-10  cursor-pointer rounded-full bg-white text-footer-color" />
@@ -56,13 +52,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="text-center  pb-10">
+        <Font className="text-center  pb-10">
           © 2022 PATH TO CANADA. ALL RIGHTS RESERVED. | PRIVACY NOTICE
-        </p>
+        </Font>
       </Wrapper>
     </div>
   );
 };
 
 export default Footer;
-// https://path2canada.ca/wp-content/uploads/2022/05/leaf.green_.footer.png
