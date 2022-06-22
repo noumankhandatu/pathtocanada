@@ -1,6 +1,6 @@
 import React from "react";
 import HomePageFirstSection from "../../components/Organism/homePageFirstSection/index";
-
+import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection/index";
 const Jobs = () => {
   return (
     <div className="pt-40">
@@ -10,6 +10,7 @@ const Jobs = () => {
         bgImage="https://path2canada.ca/wp-content/uploads/2022/05/jobs_hero.svg"
         showFirstBtn={true}
       />
+      <BlackBannerLeafSection />
     </div>
   );
 };
