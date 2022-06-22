@@ -6,6 +6,8 @@ import Footer from "../components/Organism/Footer/index";
 import Error from "../Pages/Error/index";
 import Employee from "../Pages/Employee/index";
 import Employers from "../Pages/Employers/index";
+import Jobs from '../Pages/Jobs/index';
+import FAQS from '../Pages/FAQS/index';
 const Routing = () => {
   return (
     <div>
@@ -16,7 +18,9 @@ const Routing = () => {
             <Route path={path} element={<Home />} />
           ))}
           <Route path="/employee" element={<Employee />} />
+          <Route path="/jobs" element={<Jobs />} />
           <Route path="/employer" element={<Employers />} />
+          <Route path="/faqs" element={<FAQS />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
