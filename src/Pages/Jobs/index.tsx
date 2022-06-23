@@ -6,7 +6,9 @@ import Stepper from "../../components/Molecules/stepper";
 import StepperArray from "../../components/array/stepperArray";
 import Button from "../../components/Atoms/button";
 import Select from "../../components/Atoms/select";
-import { BsSearch } from "react-icons/bs";
+import { BsFillBagCheckFill, BsSearch } from "react-icons/bs";
+import { IoLocation } from "react-icons/io5";
+import { RiCalendarTodoFill } from "react-icons/ri";
 import Font from "../../components/Atoms/Font";
 
 const Jobs = () => {
@@ -48,11 +50,33 @@ const Jobs = () => {
               src="https://path2canada.ca/wp-content/plugins/simple-job-board/public/images/company.png"
               alt=""
             />
-            <Font className="ml-4">Team Lead – Data Science</Font>
+            <Font className="ml-6 mt-2">Team Lead – Data Science</Font>
           </div>
           <div>
             <Button text={"Apply Now"} teal />
           </div>
+        </div>
+        <div className="p-5 border border-gray-300">
+          <div className=" grid grid-cols-[0.5fr_0.7fr_1fr_1fr] pb-10 ">
+            <div className="flex items-center">
+              <BsFillBagCheckFill />
+              <Font className="ml-2">Full Time</Font>
+            </div>
+            <div className="flex items-center">
+              <IoLocation />
+              <Font className="ml-2">Calgary, AB, Remote</Font>
+            </div>
+            <div className="flex items-center">
+              <RiCalendarTodoFill />
+              <Font className="ml-2">Posted 1 month ago</Font>
+            </div>
+          </div>
+          <Font>
+            About us We operate a modern consumer credit platform that is
+            disrupting the industry. Billions of credit applications are managed
+            by our software for over 100,000 customers. Our APIs and software
+            sol...
+          </Font>
         </div>
       </Wrapper>
       <BlackBannerLeafSection />
