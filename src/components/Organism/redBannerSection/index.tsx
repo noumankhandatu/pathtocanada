@@ -2,7 +2,8 @@ import React from "react";
 import Wrapper from "../Wrapper/index";
 import Button from "../../Atoms/button";
 import Font from "../../Atoms/Font";
-import Avatar from '../../Atoms/avatar';
+import Avatar from "../../Atoms/avatar";
+import AvatarArray from "../../array/avatarArray";
 interface RedBannerProps {
   Fheading?: string;
   Sheading?: string;
@@ -100,9 +101,9 @@ const RedBannerSection = ({
         </div>
       </Wrapper>
       <Wrapper className="bg-TCard-color">
-        <div className="grid grid-cols-3 pt-20 pb-20 gap-10">
-          {[1, 2, 3, 4].map((nums: number) => {
-            return <Avatar />;
+        <div className="grid lg:grid-cols-3  grid-cols-1 pt-20 pb-20 gap-10">
+          {AvatarArray.map((items: object) => {
+            return <Avatar items={items} />;
           })}
         </div>
       </Wrapper>

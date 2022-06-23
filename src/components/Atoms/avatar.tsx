@@ -1,16 +1,15 @@
 import React from "react";
 import Font from "./Font";
-
-const Avatar = () => {
+interface AvatarProps {
+  items: object | any;
+}
+const Avatar = ({ items }: AvatarProps) => {
+  const { img, label, name } = items;
   return (
     <div className="flex flex-col text-center items-center justify-center">
-      <img
-        className="rounded-full"
-        src="https://path2canada.ca/wp-content/uploads/2022/05/p2c_team_jaz.jpg"
-        alt=""
-      />
-      <p className="text-2xl font-semibold pt-4 pb-4 text-aqua-color">Jaz Guram</p>
-      <Font>Recruitment Lead</Font>
+      <img className="rounded-full grayscale" src={img} alt="Avatars" />
+      <p className="text-2xl font-semibold pt-4 pb-4 text-aqua-color">{name}</p>
+      <Font>{label}</Font>
     </div>
   );
 };
