@@ -41,7 +41,7 @@ const Button = ({
       ) : null}
       {dark ? (
         <button
-          className={`${className} ${cssProps} hover:bg-red-600 bg-gray-600 hover:text-white   border-gray-600 hover:border-white`}
+          className={`${className} ${cssProps} hover:bg-red-600 bg-gray-700 hover:text-white   border-gray-600 hover:border-white`}
         >
           {text}
         </button>
