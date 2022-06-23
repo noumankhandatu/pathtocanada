@@ -1,6 +1,7 @@
 import React from "react";
 import HomePageFirstSection from "../../components/Organism/homePageFirstSection/index";
 import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection/index";
+import Wrapper from "../../components/Organism/Wrapper/index";
 const Jobs = () => {
   return (
     <div className="pt-40">
@@ -11,6 +12,7 @@ const Jobs = () => {
         showFirstBtn={true}
       />
       <BlackBannerLeafSection />
+      <Wrapper className="bg-aqua-color">adad</Wrapper>
     </div>
   );
 };

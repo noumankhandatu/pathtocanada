@@ -14,7 +14,7 @@ import Font from "../../Atoms/Font";
 const Footer = () => {
   return (
     <div>
-      <Wrapper bgColor="bg-footer-color pt-10 pb-10 text-white h-auto bg-[url('https://path2canada.ca/wp-content/uploads/2022/05/leaf.green_.footer.png')] bg-no-repeat bg-footer-img-position">
+      <Wrapper className="bg-footer-color pt-10 pb-10 text-white h-auto bg-[url('https://path2canada.ca/wp-content/uploads/2022/05/leaf.green_.footer.png')] bg-no-repeat bg-footer-img-position">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pb-20 pt-20">
           <div>
             <p className="lg:text-5xl text-4xl font-bold tracking-wider">

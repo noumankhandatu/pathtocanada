@@ -16,7 +16,7 @@ const FAQS = () => {
           "https://path2canada.ca/wp-content/uploads/2022/05/faqs_hero.svg"
         }
       />
-      <Wrapper bgColor="bg-aqua-color text-white">
+      <Wrapper className="bg-aqua-color text-white">
         <div className="pt-20 pb-20 text-center">
           <p className="text-4xl font-bold">Help me find a candidate</p>
           <p className="font-bold pt-10 pb-2">
@@ -43,7 +43,7 @@ const FAQS = () => {
           </Font>
         </div>
       </Wrapper>
-      <Wrapper bgColor="pt-32 pb-20">
+      <Wrapper className="pt-32 pb-20">
         <div className="grid grid-cols-2 gap-10">
           <Banner text="EMPLOYER FAQ" />
           <Banner text="EMPLOYER FAQ" />

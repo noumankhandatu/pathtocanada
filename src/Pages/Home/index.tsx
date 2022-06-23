@@ -22,7 +22,7 @@ const Home = () => {
         showSecondBtn={true}
       />
       {/* Second Section Started  => */}
-      <Wrapper bgColor="bg-light-red">
+      <Wrapper className="bg-light-red">
         <p className="text-4xl text-center font-bold pt-20  pb-10  text-cyan-900">
           Path to Canada has a deep understanding
           <p className="breaks-words">
@@ -121,7 +121,7 @@ const Home = () => {
         </div>
       </Wrapper>
       {/* Road Map Start */}
-      <Wrapper bgColor="bg-road-map-color text-white">
+      <Wrapper className="bg-road-map-color text-white">
         <div className=" pt-20 pb-52">
           <p className="lg:text-5xl text-3xl text-center   font-bold ">
             The Path to Canada Road Map
@@ -140,7 +140,7 @@ const Home = () => {
         </div>
       </Wrapper>
       {/* red layer connecting section */}
-      <Wrapper bgColor="bg-red-bgColor text-white pb-20">
+      <Wrapper className="bg-red-bgColor text-white pb-20">
         <div className=" pt-16 pb-16">
           <p className="lg:text-4xl text-3xl text-center   font-bold ">
             We connect talent to hiring Canadian tech companies
@@ -166,7 +166,7 @@ const Home = () => {
         </div>
       </Wrapper>
       {/* testimonals */}
-      <Wrapper bgColor="pb-20 ">
+      <Wrapper className="pb-20 ">
         <div className=" pt-20 pb-16">
           <p className="lg:text-5xl text-4xl text-center text-aqua-color  font-bold ">
             What our candidates say
