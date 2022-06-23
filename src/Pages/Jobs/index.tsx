@@ -23,7 +23,7 @@ const Jobs = () => {
       />
       <Wrapper className="bg-aqua-color pt-20 pb-20 text-white text-center">
         <p className="text-5xl font-bold">How we help you get a Canadian job</p>
-        <div className="pt-20 flex">
+        <div className="flex flex-col  lg:flex-row justify-center items-center lg:items-start pt-20">
           {StepperArray.map((items: any) => {
             const { count, paragraph, heading } = items;
             return (
@@ -36,11 +36,11 @@ const Jobs = () => {
         </div>
       </Wrapper>
       <Wrapper className="bg-white pt-20 pb-20">
-        <div className="bg-accordion-color  grid grid-cols-4 gap-10 p-10">
+        <div className="bg-accordion-color  grid lg:grid-cols-4 grid-cols-1 gap-10 p-10">
           <Select label={"Job Type"} values={values} />
           <Select label={"Location"} values={values} />
           <div className="bg-teal-700 flex items-center justify-center">
-            <BsSearch className="text-white w-5 h-5" />
+            <BsSearch className="text-white w-5 h-8 lg:h-5 " />
           </div>
         </div>
         <div className="mt-10 p-5 border border-gray-300 flex justify-between">
@@ -57,7 +57,7 @@ const Jobs = () => {
           </div>
         </div>
         <div className="p-5 border border-gray-300">
-          <div className=" grid grid-cols-[0.5fr_0.7fr_1fr_1fr] pb-10 ">
+          <div className="bg-accordion-color  grid lg:grid-cols-4 grid-cols-1 gap-10 lg:p-10 pl-6">
             <div className="flex items-center">
               <BsFillBagCheckFill />
               <Font className="ml-2">Full Time</Font>

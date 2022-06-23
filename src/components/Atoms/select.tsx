@@ -9,7 +9,7 @@ const Select = ({ label, values }: SelectProps) => {
     <div>
       <select
         id="countries"
-        className="bg-white border border-white-300  cursor-pointer w-full p-2.5  text-black focus:outline-none"
+        className="bg-white border border-white-300  cursor-pointer lg:w-full  p-2.5  text-black focus:outline-none"
       >
         <option selected>
           <Font>{label}</Font>

@@ -8,18 +8,18 @@ type StepperProps = {
 };
 const Stepper = ({ count, heading, paragraph }: StepperProps) => {
   return (
-    <div className=" pt-5 pb-5 w-1/3 text-center">
+    <div className=" pt-5 pb-5 w-full text-center">
       <div className="relative">
         <div
           className="bg-white"
           style={{ height: "2px", width: "100%" }}
         ></div>
         <CountCircle
-          className="absolute -top-6 lg:right-35 md:right-24 right-7   "
+          className="absolute -top-6 lg:left-36 md:left-96 left-32"
           count={count}
         />
       </div>
-      <Font className="pt-10 pb-5 text-xl font-bold">{heading}</Font>
+      <Font className="pt-20 pb-5 text-xl font-bold">{heading}</Font>
       <Font className="font-bold">{paragraph}</Font>
     </div>
   );

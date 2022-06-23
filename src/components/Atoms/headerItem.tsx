@@ -10,6 +10,8 @@ const HeaderItem = ({ text, id }: HeaderItemProps) => {
   if (id === 1) teleport = "employer";
   if (id === 2) teleport = "jobs";
   if (id === 3) teleport = "faqs";
+  if (id === 4) teleport = "blog";
+  if (id === 5) teleport = "aboutus";
   return (
     <Link
       to={`/${teleport}`}
