@@ -7,7 +7,7 @@ type CountCircleProps = {
 const CountCircle = ({ count, className }: CountCircleProps) => {
   return (
     <div
-      className={`p-4 h-12 w-12 text-center rounded-full flex items-center  ${className} bg-red-600 text-white text-2xl`}
+      className={`p-5  h-14 text-center rounded-full flex items-center  ${className} bg-red-600 text-white text-2xl	font-bold`}
     >
       {count}
     </div>
