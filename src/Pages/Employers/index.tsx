@@ -17,7 +17,7 @@ const Employers = () => {
         }
         showFirstBtn={true}
       />
-      <Wrapper bgColor="bg-employee-Color">
+      <Wrapper className="bg-employee-Color">
         <div className="grid lg:grid-cols-2  grid-cols-1 gap-10 pt-20 pb-20">
           <div>
             <p className="text-4xl font-bold text-aqua-color">
@@ -85,7 +85,7 @@ const Employers = () => {
         </div>
       </Wrapper>
       {/* Canada  Secret  Section Starts*/}
-      <Wrapper bgColor="bg-aqua-color text-white pt-20 pb-20">
+      <Wrapper className="bg-aqua-color text-white pt-20 pb-20">
         <div className="text-center pb-20 pt-20">
           <p className="text-5xl font-bold pb-5">Canada’s Secret Weapon</p>
           <Font>

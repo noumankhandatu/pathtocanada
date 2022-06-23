@@ -18,7 +18,7 @@ const Employee = () => {
         bgImage={`https://path2canada.ca/wp-content/uploads/2022/05/employees_hero.svg`}
         showFirstBtn={true}
       />
-      <Wrapper bgColor="bg-employee-Color pt-5 pb-20">
+      <Wrapper className="bg-employee-Color pt-5 pb-20">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10  pt-20 ">
           <div>
             <img
@@ -54,7 +54,7 @@ const Employee = () => {
           })}
         </div>
       </Wrapper>
-      <Wrapper bgColor="bg-form-color">
+      <Wrapper className="bg-form-color">
         <div
           style={{
             backgroundSize: "40% 59%",
@@ -163,7 +163,7 @@ const Employee = () => {
             <Font className="pt-4">
               We understand that moving to a new country isn’t easy and you’ll
               have lots of questions. We are here to support you every step of
-              the way. 
+              the way.
             </Font>
           </div>
           <div>

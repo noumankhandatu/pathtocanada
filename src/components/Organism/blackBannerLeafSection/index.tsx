@@ -4,7 +4,7 @@ import Wrapper from "../Wrapper/index";
 const BlackBannerLeafSection = () => {
   return (
     <div>
-      <Wrapper bgColor="bg-black pt-7 pb-7 z-10">
+      <Wrapper className="bg-black pt-7 pb-7 z-10">
         <div className="grid grid-cols-1 text-center md:grid-cols-[1fr_0.2fr_1fr] items-center	  gap-4 md:gap-20 ">
           <div className="border-t-8 border-hrBanner-color  "></div>
           <div className="flex justify-center ">
