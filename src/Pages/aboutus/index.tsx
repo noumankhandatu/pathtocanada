@@ -3,6 +3,7 @@ import HomePageFirstSection from "../../components/Organism/homePageFirstSection
 import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection";
 import Wrapper from "../../components/Organism/Wrapper/index";
 import Font from "../../components/Atoms/Font";
+import RedBannerSection from "../../components/Organism/redBannerSection/index";
 const AboutUs = () => {
   return (
     <div className="pt-40">
@@ -26,6 +27,12 @@ const AboutUs = () => {
           path of building your life and tech career in Canada.
         </Font>
       </Wrapper>
+      <RedBannerSection
+        Fheading="Find me a role in Canada"
+        Sheading="Find me talent"
+        Flabel="HELP ME BUILD MY LIFE AND CAREER"
+        Slabel="HELP ME FILL OUR OPEN ROLES"
+      />
       <BlackBannerLeafSection />
     </div>
   );
