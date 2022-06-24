@@ -1,10 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { baseUrl } from "../../services";
 export const fetchUserById: any = createAsyncThunk(
   "akaBlogSlicerThunk",
   async () => {
-    const response = await axios.get("https://fakestoreapi.com/products");
-    return response.data;
+    const response = await baseUrl.get("/products").catch((err) => {
+      console.log(err);
+    });
+    console.log(response);
+    return response;
   }
 );
 
@@ -26,7 +29,7 @@ const BlogSlicer = createSlice({
     },
     [fetchUserById.fulfilled]: (state: any, { payload }: any) => {
       console.log("fullfilled ");
-      return { ...state, data: payload };
+      return { ...state, data: payload.data };
     },
     [fetchUserById.rejected]: () => {
       console.log("rejected");
