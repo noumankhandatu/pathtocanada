@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomePageFirstSection from "../../components/Organism/homePageFirstSection";
 import BlackBannerLeafSection from "../../components/Organism/blackBannerLeafSection";
 import BlogCard from "../../components/Atoms/blogCard";
 import Wrapper from "../../components/Organism/Wrapper";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchUserById } from "../../Redux/blogSlicer/index";
 const Blog = () => {
+  const dispatch = useDispatch();
+  const state: any = useSelector((state: any) => state.BlogSlicer.data);
+  console.log(state, "my state");
+  useEffect(() => {
+    dispatch(fetchUserById());
+  }, []);
   return (
     <div className="pt-40">
       <HomePageFirstSection
@@ -13,7 +21,17 @@ const Blog = () => {
       />
       <Wrapper>
         <div className="pt-10 pb-20">
-          <BlogCard />
+          <div className="grid grid-cols-3 gap-10">
+            {state ? (
+              <>
+                {state.map((items: any) => {
+                  return <BlogCard items={items} />;
+                })}
+              </>
+            ) : (
+              `Loading`
+            )}
+          </div>
         </div>
       </Wrapper>
       <BlackBannerLeafSection />

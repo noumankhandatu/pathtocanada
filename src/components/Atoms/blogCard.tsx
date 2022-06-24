@@ -1,20 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Font from "./Font";
 import RedLableText from "./redLableText";
+import { fetchUserById } from "../../Redux/blogSlicer/index";
+import Blog from "../../Pages/blog/index";
 
-const BlogCard = () => {
+const BlogCard = ({ items }: object | any) => {
+  const { image, title, price, description } = items;
   return (
-    <div>
-      <img src="https://picsum.photos/400/200" alt="" />
-      <p className="text-xl text-aqua-color font-bold pb-2 pt-2">
-        British Columbia’s Tech Visa Program Promises Speedy Canadian Permanent
-        Residence – A Discussion With RCIC Jenny Perez
-      </p>
-      <small>june 9 </small>
-      <Font className="pt-2 pb-2">
-        In an effort to boost its economy, Canada is significantly increasing
-        its annual immigration targets. So, if you’ve...
-      </Font>
+    <div className="shadow-lg text-center flex flex-col justify-center items-center cursor-pointer">
+      <img className={"w-[200px] h-[200px]"} src={image} alt="" />
+      <p className="text-xl text-aqua-color font-bold pb-2 pt-2">{title}</p>
+      <small>{price} </small>
+      {/* <Font className="pt-2 pb-2">{description}</Font> */}
       <RedLableText text="READ MORE" />
     </div>
   );
