@@ -21,10 +21,11 @@ const Blog = () => {
       />
       <Wrapper>
         <div className="pt-10 pb-20">
+          <p className="text-5xl pb-20 pt-20 text-center">こんにちは</p>
           <div className="grid grid-cols-3 gap-10">
             {state ? (
               <>
-                {state.map((items: any) => {
+                {state.map((items: object) => {
                   return <BlogCard items={items} />;
                 })}
               </>
