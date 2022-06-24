@@ -11,5 +11,5 @@
   scroll-behavior: smooth;
   text-decoration: none;
   /* font wasnt applyin on tailwind.config file so  i applied here */
-  font-family: "Montserrat",;
+  font-family: "Montserrat";
 }
