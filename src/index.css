@@ -10,6 +10,11 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   text-decoration: none;
-  /* font wasnt applyin on tailwind.config file so  i applied here */
   font-family: "Montserrat";
+}
+.active {
+  color: red;
+}
+.unactive {
+  color: black;
 }

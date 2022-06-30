@@ -49,7 +49,7 @@ const FAQS = () => {
           <Banner text="EMPLOYER FAQ" />
         </div>
         <div className="grid grid-cols-2 gap-10 gap-cols-20 mt-10">
-          {AccordionArray.map((items: object) => {
+          {AccordionArray.map((items: {}) => {
             return <Accordion items={items} />;
           })}
         </div>

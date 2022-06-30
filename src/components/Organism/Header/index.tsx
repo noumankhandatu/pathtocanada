@@ -3,8 +3,18 @@ import { MenuIcon } from "@heroicons/react/solid";
 import HeaderItem from "../../Atoms/headerItem";
 import { Link } from "react-router-dom";
 import ScrollTopButton from "../../Molecules/scrollTopButton";
+import Drawer from "../Drawer/index";
 
+export const myArray: string[] = [
+  "EMPLOYEE ",
+  "EMPLOYERS",
+  "JOBS",
+  "FAQS ",
+  "BLOG",
+  "ABOUT US",
+];
 const Header = () => {
+  const [drawer, setDrawer] = useState<boolean>(false);
   const iconRef = useRef<HTMLDivElement>(null!);
   const [headerValue, setHeaderValue] = useState<number>(1);
   const headerRef = useRef<HTMLDivElement>(null!);
@@ -15,7 +25,7 @@ const Header = () => {
     };
     if (headerValue > 100) {
       headerRef.current.style.height = "55px";
-      imageRef.current.style.height = "30px";
+      imageRef.current.style.height = "40px";
       headerRef.current.style.boxShadow = "2px 2px 4px #e4e4e7";
     } else if (headerValue < 100) {
       headerRef.current.style.height = "100px";
@@ -26,14 +36,7 @@ const Header = () => {
       if (headerValue >= 1000) iconRef.current.style.display = "block";
       else if (headerValue <= 1000) iconRef.current.style.display = "none";
   });
-  const myArray: string[] = [
-    "EMPLOYEE ",
-    "EMPLOYERS",
-    "JOBS",
-    "FAQS ",
-    "BLOG",
-    "ABOUT US",
-  ];
+
   return (
     <div>
       <div ref={iconRef}>
@@ -55,13 +58,14 @@ const Header = () => {
             return <HeaderItem text={items} id={id} />;
           })}
         </div>
-        <div className="block sm:block md:block lg:hidden">
+        <div className="block sm:block md:block lg:hidden relative">
           <MenuIcon
             onClick={() => {
-              alert("Loading");
+              setDrawer(!drawer);
             }}
             className="w-8 h-8"
           />
+          {drawer && <Drawer drawer={drawer} setDrawer={setDrawer} />}
         </div>
       </div>
     </div>
