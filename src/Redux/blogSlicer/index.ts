@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { baseUrl } from "../../services";
 export const fetchUserById: any = createAsyncThunk(
   "akaBlogSlicerThunk",
@@ -10,8 +10,10 @@ export const fetchUserById: any = createAsyncThunk(
     return response;
   }
 );
-
-let initialState = {
+type InitialState = {
+  data: [];
+};
+const initialState: InitialState = {
   data: [],
 };
 
@@ -19,7 +21,7 @@ const BlogSlicer = createSlice({
   name: "akaBlogSlicer",
   initialState,
   reducers: {
-    blogDataFetchAct: (state: object | any, { payload }: object | any) => {
+    blogDataFetchAct: (state: any, { payload }: object | any) => {
       state.data = payload;
     },
   },

@@ -5,10 +5,11 @@ import BlogCard from "../../components/Atoms/blogCard";
 import Wrapper from "../../components/Organism/Wrapper";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUserById } from "../../Redux/blogSlicer/index";
+import Spinner from "../../components/Atoms/spinner";
+import Font from "../../components/Atoms/Font";
 const Blog = () => {
   const dispatch = useDispatch();
   const state: any = useSelector((state: any) => state.BlogSlicer.data);
-  console.log(state, "my state");
   useEffect(() => {
     dispatch(fetchUserById());
   }, []);
@@ -21,17 +22,18 @@ const Blog = () => {
       />
       <Wrapper>
         <div className="pt-10 pb-20">
-          <div className="grid grid-cols-3 gap-10">
+          <div>
             {state && state.length > 1 ? (
-              <>
+              <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
                 {state.map((items: object) => {
                   return <BlogCard items={items} />;
                 })}
-              </>
+              </div>
             ) : (
-              <p className="text-3xl pb-20 pt-20 text-center">
-                こんにちは Loading Data...
-              </p>
+              <div className="text-center">
+                <Spinner />
+                <Font>Please Wait</Font>
+              </div>
             )}
           </div>
         </div>

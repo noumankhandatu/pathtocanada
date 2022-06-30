@@ -5,13 +5,15 @@ import { fetchUserById } from "../../Redux/blogSlicer/index";
 import Blog from "../../Pages/blog/index";
 
 const BlogCard = ({ items }: object | any) => {
+  console.log(items);
+
   const { image, title, price, description } = items;
   return (
-    <div className="shadow-lg text-center flex flex-col justify-center items-center cursor-pointer">
-      <img className={"w-[200px] h-[200px]"} src={image} alt="" />
-      <p className="text-xl text-aqua-color font-bold pb-2 pt-2">{title}</p>
+    <div className="  flex flex-col cursor-pointer">
+      <img className={"w-[300px] h-[200px]"} src={image} alt="" />
+      <p className="text-xl text-aqua-color font-bold pb-2 pt-10">{title}</p>
       <small>{price} </small>
-      {/* <Font className="pt-2 pb-2">{description}</Font> */}
+      <Font className="pt-2 pb-2">{description}</Font>
       <RedLableText text="READ MORE" />
     </div>
   );
