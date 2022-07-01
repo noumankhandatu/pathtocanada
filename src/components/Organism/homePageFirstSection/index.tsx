@@ -25,7 +25,7 @@ const HomePageFirstSection = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="pt-10 pl-10 pr-10 md:pl-20 md:pr-20 md:w-1/2">
+        <div className="pt-5 pl-5 pr-10 md:pl-20 md:pr-20 md:w-1/2">
           <p className="lg:text-6xl text-4xl font-bold md:tracking-wide text-cyan-900	">
             {heading}
           </p>

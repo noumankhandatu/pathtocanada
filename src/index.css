@@ -13,8 +13,11 @@
   font-family: "Montserrat";
 }
 .active {
-  color: red;
+  color: #ed1718;
 }
 .unactive {
-  color: black;
+  color: #000000;
+}
+.cord {
+  height: max-content;
 }

@@ -8,3 +8,10 @@ const store = configureStore({
 });
 
 export default store;
+
+export type RootState = ReturnType<typeof store.getState>;
+export const selectTodo = (state: RootState) => state.BlogSlicer.data;
+// this rootstate share the entire reducer
+
+export type AppDispatch = typeof store.dispatch;
+// useDispatch

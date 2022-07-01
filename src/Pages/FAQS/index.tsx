@@ -44,11 +44,11 @@ const FAQS = () => {
         </div>
       </Wrapper>
       <Wrapper className="pt-32 pb-20">
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1  gap-10">
           <Banner text="EMPLOYER FAQ" />
           <Banner text="EMPLOYER FAQ" />
         </div>
-        <div className="grid grid-cols-2 gap-10 gap-cols-20 mt-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 gap-cols-20 mt-10">
           {AccordionArray.map((items: {}) => {
             return <Accordion items={items} />;
           })}

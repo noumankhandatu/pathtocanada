@@ -21,19 +21,20 @@ const Accordion = ({ items }: AccordionProps) => {
     }
   };
   useEffect(() => {
+    ref.current.style.background = "#F4F4F4";
     toggle.current.style.display = "none";
   }, []);
   return (
     <div
       ref={ref}
-      className="p-3  accordion  accordionExamplebg-accordion-color border ease-in-out duration-1000 cursor-pointer  border-gray-300"
+      className="p-3  ease-in-out duration-1000 cursor-pointer cord border"
       onClick={handleToggle}
     >
-      <div className="flex justify-between max-w-none max-h-none">
+      <div className="flex justify-between ">
         <small>{label}</small>
         <IoIosArrowDropdown className="w-5 h-5  text-gray-300" />
       </div>
-      <div ref={toggle} className="ease-in-out duration-1000 ">
+      <div ref={toggle} className="ease-in-out duration-1000  ">
         <small className="pt-6 ">{paragraph}</small>
       </div>
     </div>
