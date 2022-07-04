@@ -14,11 +14,14 @@ export const myArray: string[] = [
   "ABOUT US",
 ];
 const Header = () => {
-  const [drawer, setDrawer] = useState<boolean>(false);
   const iconRef = useRef<HTMLDivElement>(null!);
+  const drawerRef = useRef<HTMLDivElement>(null!);
   const [headerValue, setHeaderValue] = useState<number>(1);
   const headerRef = useRef<HTMLDivElement>(null!);
   const imageRef = useRef<HTMLImageElement>(null!);
+  useEffect(() => {
+    drawerRef.current.style.height = "0px";
+  }, []);
   useEffect(() => {
     window.onscroll = () => {
       setHeaderValue(window.pageYOffset);
@@ -36,7 +39,15 @@ const Header = () => {
       if (headerValue >= 1000) iconRef.current.style.display = "block";
       else if (headerValue <= 1000) iconRef.current.style.display = "none";
   });
-
+  const handleDrawer = () => {
+    if (drawerRef.current.style.height === "0px") {
+      drawerRef.current.style.height = "310px";
+      drawerRef.current.style.padding = "32px";
+    } else if ((drawerRef.current.style.height = "310px")) {
+      drawerRef.current.style.height = "0px";
+      drawerRef.current.style.padding = "0px";
+    }
+  };
   return (
     <div>
       <div ref={iconRef}>
@@ -53,19 +64,14 @@ const Header = () => {
             src="https://path2canada.ca/wp-content/uploads/2022/05/pathToCanada_logo.svg"
           />
         </Link>
-        <div className="md:hidden gap-4 sm:hidden lg:flex space-x-4 hidden ">
+        <div className="md:hidden gap-1 sm:hidden lg:flex space-x-4 hidden ">
           {myArray.map((items, id) => {
             return <HeaderItem text={items} id={id} />;
           })}
         </div>
         <div className="block sm:block md:block lg:hidden relative">
-          <MenuIcon
-            onClick={() => {
-              setDrawer(!drawer);
-            }}
-            className="w-8 h-8"
-          />
-          {drawer && <Drawer drawer={drawer} setDrawer={setDrawer} />}
+          <MenuIcon className="w-8 h-8" onClick={handleDrawer} />
+          <Drawer ref={drawerRef} />
         </div>
       </div>
     </div>
@@ -73,6 +79,3 @@ const Header = () => {
 };
 
 export default Header;
-function refresh() {
-  throw new Error("Function not implemented.");
-}
